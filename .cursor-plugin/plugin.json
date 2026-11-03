@@ -1,0 +1,18 @@
+{
+  "name": "shappy",
+  "displayName": "Shappy",
+  "version": "1.0.0",
+  "description": "Run your business from Grok Bot. Quotes, clients and follow-ups in your SHAPP apps.",
+  "author": {
+    "name": "SHAPP",
+    "email": "contact@rootcx.com"
+  },
+  "homepage": "https://shapp.ai/integrations/grok-bot",
+  "repository": "https://github.com/RootCX/shappy-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": ["shappy", "shapp", "quotes", "clients", "follow-ups", "business software"],
+  "category": "integrations",
+  "tags": ["shappy", "shapp", "quotes", "small-business", "mcp"],
+  "mcpServers": "./mcp.json"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "shappy": {
+      "type": "http",
+      "url": "https://app.shapp.ai/mcp"
+    }
+  }
+}
