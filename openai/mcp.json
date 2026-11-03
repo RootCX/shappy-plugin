@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "shappy": {
+      "type": "streamable-http",
+      "url": "https://app.shapp.ai/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": { "mode": "dcr" },
+            "registrationUrl": "https://app.shapp.ai/api/oidc/register",
+            "authorizationUrl": "https://app.shapp.ai/api/oidc/authorize",
+            "tokenUrl": "https://app.shapp.ai/api/oidc/token",
+            "resource": "https://app.shapp.ai/mcp",
+            "baseScopes": ["mcp:read", "mcp:write", "offline_access"]
+          }
+        }
+      }
+    }
+  }
+}

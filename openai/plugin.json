@@ -1,0 +1,43 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "shappy",
+  "version": "1.0.0",
+  "description": "Talk to Shappy, which runs your SHAPP business apps. What Shappy can do comes from the apps installed in your company: each app declares its actions and how to use them.",
+  "author": {
+    "name": "SHAPP",
+    "email": "contact@rootcx.com",
+    "url": "https://shapp.ai"
+  },
+  "homepage": "https://shapp.ai",
+  "repository": "https://github.com/RootCX/shappy-plugin",
+  "license": "MIT",
+  "keywords": ["shappy", "shapp", "business software", "small business"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Shappy",
+        "shortDescription": "Run your SHAPP business apps",
+        "longDescription": "Shappy connects ChatGPT to your SHAPP company. Ask in plain words and Shappy works in your business apps for you: it reads your records, prepares drafts and keeps everything in real business software rather than in a chat.\n\nWhat Shappy can do depends on the SHAPP apps installed in your company. Each app declares its actions and how to use them, and Shappy only uses those.\n\nShappy works under your SHAPP role, and every action is recorded in your company's audit log. It never sends a message or signs a document for you: you do that in the app.\n\nFor people who run a small business with SHAPP. You need a SHAPP account and a company to connect.",
+        "developerName": "SHAPP",
+        "category": "Business & Operations",
+        "capabilities": [
+          "Reads the records of the SHAPP apps installed in your company",
+          "Creates and updates records, such as drafts, with each app's own actions",
+          "Sets up an app from a document and a logo you share",
+          "Summarizes what needs your attention and what is waiting for an answer"
+        ],
+        "websiteURL": "https://shapp.ai",
+        "supportURL": "https://shapp.ai/en/integrations",
+        "privacyPolicyURL": "https://rootcx.com/privacy-policy",
+        "termsOfServiceURL": "https://rootcx.com/terms-of-service",
+        "defaultPrompt": [
+          "Set up my company from this old document and logo.",
+          "What needs my attention today?",
+          "What is still waiting for an answer?"
+        ],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png"
+      }
+    }
+  }
+}

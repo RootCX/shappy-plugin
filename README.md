@@ -12,6 +12,10 @@ Server: `https://app.shapp.ai/mcp` (OAuth, no API key).
 2. Sign in to SHAPP once, or create your account and company. There is no API key to copy.
 3. Choose your company and connect.
 
+### ChatGPT
+
+Once Shappy is published in the ChatGPT plugin directory, add it from **Plugins** in ChatGPT, then sign in to SHAPP and choose your company. The upload package lives in `openai/`; `openai/build-zip.sh` builds it.
+
 ## What you can ask
 
 - "Set up my company from this old document and logo."
