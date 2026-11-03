@@ -2,7 +2,7 @@
   "name": "shappy",
   "displayName": "Shappy",
   "version": "1.0.0",
-  "description": "Run your business from Grok Bot. Quotes, clients and follow-ups in your SHAPP apps.",
+  "description": "Talk to Shappy from your AI assistant. Shappy runs your SHAPP apps: quotes, clients and follow-ups.",
   "author": {
     "name": "SHAPP",
     "email": "contact@rootcx.com"

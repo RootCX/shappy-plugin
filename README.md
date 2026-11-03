@@ -1,8 +1,12 @@
-# Shappy for Grok Bot
+# Shappy
 
-Run your business from Grok Bot. Shappy connects your agent to your SHAPP apps, so quotes, clients and follow-ups live in real business software rather than in a chat.
+Talk to Shappy from your AI assistant. Shappy runs your SHAPP apps for you, so quotes, clients and follow-ups live in real business software rather than in a chat.
 
 ## Setup
+
+Server: `https://app.shapp.ai/mcp` (OAuth, no API key).
+
+### Grok Bot
 
 1. Add Shappy from **Connect apps** in Grok Bot.
 2. Sign in to SHAPP once, or create your account and company. There is no API key to copy.
@@ -19,7 +23,7 @@ Run your business from Grok Bot. Shappy connects your agent to your SHAPP apps, 
 - `/shappy-brief`: today's summary.
 - `/shappy-relances`: quotes waiting for a reply, with follow-ups ready for you to send.
 
-Both can run as a Grok Bot routine.
+Both can run as a scheduled routine in your assistant.
 
 ## Skills
 
@@ -35,7 +39,7 @@ Both can run as a Grok Bot routine.
 
 Shappy works under your SHAPP role, and every action is recorded in your company's audit log. The connector can read and update your company's data in its apps. It has no action that sends a message to a client or signs a document: you do that in the app.
 
-To disconnect, remove Shappy in Grok Bot. Removing a person from your SHAPP company ends their access right away.
+To disconnect, remove Shappy from your assistant. Removing a person from your SHAPP company ends their access right away.
 
 ## Configuration
 
