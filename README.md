@@ -1,6 +1,6 @@
 # Shappy
 
-Talk to Shappy from your AI assistant. Shappy runs your SHAPP apps for you, so quotes, clients and follow-ups live in real business software rather than in a chat.
+Talk to Shappy from your AI assistant. Shappy runs your SHAPP apps for you, so your work stays in real business software rather than in a chat.
 
 ## Setup
 
@@ -14,14 +14,16 @@ Server: `https://app.shapp.ai/mcp` (OAuth, no API key).
 
 ## What you can ask
 
-- "Make a quote for Mrs Dupont, based on the Martin one."
-- "Who should I chase today?"
-- "Here's an old quote, set up my prices and logo from it."
+- "Set up my company from this old document and logo."
+- "What needs my attention today?"
+- "What is still waiting for an answer?"
+
+What Shappy can do depends on the SHAPP apps installed in your company: each app declares its actions and how to use them.
 
 ## Commands
 
 - `/shappy-brief`: today's summary.
-- `/shappy-relances`: quotes waiting for a reply, with follow-ups ready for you to send.
+- `/shappy-follow-ups`: what is waiting on someone else, with follow-ups ready for you to send.
 
 Both can run as a scheduled routine in your assistant.
 
@@ -30,14 +32,13 @@ Both can run as a scheduled routine in your assistant.
 | Skill | Use |
 |---|---|
 | `shappy` | How to work with SHAPP apps |
-| `shappy-devis` | Create quotes, set up from an old quote |
-| `shappy-clients` | Find and manage clients |
-| `shappy-relances` | Find unanswered quotes, draft follow-ups |
+| `shappy-import` | Set up from an existing document and logo |
 | `shappy-brief` | Daily summary |
+| `shappy-follow-ups` | What is waiting, with follow-ups to send |
 
 ## Permissions
 
-Shappy works under your SHAPP role, and every action is recorded in your company's audit log. The connector can read and update your company's data in its apps. It has no action that sends a message to a client or signs a document: you do that in the app.
+Shappy works under your SHAPP role, and every action is recorded in your company's audit log. The connector can read and update your company's data in its apps. It has no action that sends a message or signs a document: you do that in the app.
 
 To disconnect, remove Shappy from your assistant. Removing a person from your SHAPP company ends their access right away.
 

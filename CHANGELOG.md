@@ -2,4 +2,4 @@
 
 ## 1.0.0
 
-First version: connector, five skills and two commands.
+First version: the Shappy connector, four skills and two commands. What each SHAPP app can do comes from the app itself.

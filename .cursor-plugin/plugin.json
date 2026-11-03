@@ -2,7 +2,7 @@
   "name": "shappy",
   "displayName": "Shappy",
   "version": "1.0.0",
-  "description": "Talk to Shappy from your AI assistant. Shappy runs your SHAPP apps: quotes, clients and follow-ups.",
+  "description": "Talk to Shappy from your AI assistant. Shappy runs your SHAPP apps, with what each app declares it can do.",
   "author": {
     "name": "SHAPP",
     "email": "contact@rootcx.com"
@@ -11,8 +11,19 @@
   "repository": "https://github.com/RootCX/shappy-plugin",
   "license": "MIT",
   "logo": "assets/logo.png",
-  "keywords": ["shappy", "shapp", "quotes", "clients", "follow-ups", "business software"],
+  "keywords": [
+    "shappy",
+    "shapp",
+    "business software",
+    "small business",
+    "mcp"
+  ],
   "category": "integrations",
-  "tags": ["shappy", "shapp", "quotes", "small-business", "mcp"],
+  "tags": [
+    "shappy",
+    "shapp",
+    "small-business",
+    "mcp"
+  ],
   "mcpServers": "./mcp.json"
 }
