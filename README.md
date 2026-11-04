@@ -52,4 +52,4 @@ The plugin connects to `https://app.shapp.ai/mcp` with OAuth. It needs no variab
 
 ## Support
 
-contact@rootcx.com · [Privacy](https://rootcx.com/privacy-policy) · [Terms](https://rootcx.com/terms-of-service)
+[Help](https://shapp.ai/en/integrations) · [Privacy](https://shapp.ai/en/privacy) · [Terms](https://shapp.ai/en/terms)
