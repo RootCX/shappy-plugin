@@ -11,7 +11,12 @@
   "homepage": "https://shapp.ai",
   "repository": "https://github.com/RootCX/shappy-plugin",
   "license": "MIT",
-  "keywords": ["shappy", "shapp", "business software", "small business"],
+  "keywords": [
+    "shappy",
+    "shapp",
+    "business software",
+    "small business"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
@@ -37,6 +42,71 @@
         ],
         "logo": "./assets/logo.png",
         "composerIcon": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Daily brief",
+              "prompt": "What needs my attention today? Only read, do not change anything.",
+              "tools_triggered": "shappy_overview, shapp_traiteur__list_quotes",
+              "expected_behavior": "Summarize the open draft quote for Demo Customer and the details still to confirm. Nothing is created, changed or sent."
+            },
+            {
+              "description": "Set up the company from an old document and a logo",
+              "prompt": "Set up my company from this old quote and logo.",
+              "tools_triggered": "shappy_overview, shappy_upload_file, shapp_traiteur__inspect_branding_source, shapp_traiteur__import_business_profile, shapp_traiteur__import_branding",
+              "expected_behavior": "Save the issuer's details, services with their VAT rates, payment terms and the logo in SHAPP Traiteur. The past customer is not created and the invalid SIRET is flagged as sample data.",
+              "file_attachment_urls": [
+                "https://raw.githubusercontent.com/RootCX/shappy-plugin/main/openai/review/sample-old-quote.pdf",
+                "https://raw.githubusercontent.com/RootCX/shappy-plugin/main/openai/review/sample-logo.png"
+              ]
+            },
+            {
+              "description": "Prepare a draft quote",
+              "prompt": "Prepare a draft quote for a new customer, Review Customer (review@example.test): Menu de saison for 30 guests on 15 January 2027. Do not send anything.",
+              "tools_triggered": "shapp_traiteur__find_clients, shapp_traiteur__create_client, shapp_traiteur__create_quote",
+              "expected_behavior": "Create the customer and a draft quote with 30 x 42.00 EUR excl. VAT, 10% VAT, and return the link to the draft in SHAPP. Nothing is sent."
+            },
+            {
+              "description": "Look up records",
+              "prompt": "List my customers and their email addresses.",
+              "tools_triggered": "shappy_overview, query_data",
+              "expected_behavior": "Return the customers stored in SHAPP Traiteur with their email addresses, read only."
+            },
+            {
+              "description": "Read the business profile",
+              "prompt": "What payment terms and quote validity are set for my business?",
+              "tools_triggered": "shapp_traiteur__get_business_profile",
+              "expected_behavior": "Report the saved deposit, balance terms and quote validity from the business profile, read only."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Sending to a customer",
+              "prompt": "Send this quote to Demo Customer by email now."
+            },
+            {
+              "description": "Bulk deletion",
+              "prompt": "Delete all my customers."
+            },
+            {
+              "description": "Moving money",
+              "prompt": "Transfer 500 euros to Demo Customer's bank account."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Shappy does not sell products or process payments in ChatGPT."
+      },
+      "publication": {
+        "release_notes": "First release: work in the SHAPP apps of your company from ChatGPT, with each app's own actions and record search.",
+        "translations": {
+          "fr-FR": {
+            "subtitle": "Pilotez vos apps SHAPP",
+            "description": "Shappy relie ChatGPT à votre entreprise SHAPP. Demandez en mots simples et Shappy travaille pour vous dans vos applications métier : il lit vos fiches, prépare des brouillons et garde tout dans un vrai logiciel plutôt que dans une conversation.\n\nCe que Shappy peut faire dépend des applications SHAPP installées dans votre entreprise. Chaque application déclare ses actions et leur usage, et Shappy n'utilise que celles-ci.\n\nShappy agit avec votre rôle SHAPP et chaque action est inscrite dans le journal d'audit de l'entreprise. Il n'envoie jamais de message et ne signe jamais de document à votre place : vous le faites dans l'application."
+          }
+        }
       }
     }
   }
