@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "shappy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Talk to Shappy, which runs your SHAPP business apps. What Shappy can do comes from the apps installed in your company: each app declares its actions and how to use them.",
   "author": {
     "name": "SHAPP",
@@ -49,7 +49,7 @@
               "description": "Daily brief",
               "prompt": "What needs my attention today? Only read, do not change anything.",
               "tools_triggered": "shappy_overview, shapp_traiteur__list_quotes",
-              "expected_behavior": "Summarize the open draft quote for Demo Customer and the details still to confirm. Nothing is created, changed or sent."
+              "expected_behavior": "Summarize the open draft quotes, such as the one for Demo Customer, and the details still to confirm. Nothing is created, changed or sent."
             },
             {
               "description": "Set up the company from an old document and a logo",
@@ -63,9 +63,9 @@
             },
             {
               "description": "Prepare a draft quote",
-              "prompt": "Prepare a draft quote for a new customer, Review Customer (review@example.test): Menu de saison for 30 guests on 15 January 2027. Do not send anything.",
-              "tools_triggered": "shapp_traiteur__find_clients, shapp_traiteur__create_client, shapp_traiteur__create_quote",
-              "expected_behavior": "Create the customer and a draft quote with 30 x 42.00 EUR excl. VAT, 10% VAT, and return the link to the draft in SHAPP. Nothing is sent."
+              "prompt": "Prepare a draft quote for Review Customer (review@example.test): Menu de saison for 30 guests on 15 January 2027. Do not send anything.",
+              "tools_triggered": "shapp_traiteur__find_clients, shapp_traiteur__create_client (only if the customer does not exist yet), shapp_traiteur__create_quote",
+              "expected_behavior": "Reuse Review Customer if it already exists, otherwise create it, then create a new draft quote with 30 x 42.00 EUR excl. VAT, 10% VAT (1,386.00 EUR incl. VAT), and return the link to the draft in SHAPP. Nothing is sent."
             },
             {
               "description": "Look up records",
